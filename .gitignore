@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.ait
+.DS_Store
+output/
