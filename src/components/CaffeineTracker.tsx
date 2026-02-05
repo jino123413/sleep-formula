@@ -233,7 +233,7 @@ export function CaffeineTracker({
               <span className="safe-line-label">50mg 안전선</span>
             </div>
             <div className="chart-bars">
-              {timeline.slice(0, 12).map((point, index) => {
+              {timeline.filter((_, i) => i % 2 === 0).slice(0, 13).map((point, index) => {
                 const heightPercent = maxTimelineLevel > 0
                   ? (point.level / maxTimelineLevel) * 100
                   : 0;
