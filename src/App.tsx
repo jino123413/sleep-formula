@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { useInterstitialAd } from './hooks/useInterstitialAd';
 import {
   useSleepState,
@@ -86,6 +86,10 @@ function App() {
     setToastMessage(message);
     const timer = setTimeout(() => setToastMessage(null), 2500);
     setToastTimer(timer);
+  }, [toastTimer]);
+
+  useEffect(() => {
+    return () => { if (toastTimer) clearTimeout(toastTimer); };
   }, [toastTimer]);
 
   // Ad handler for analytics unlock

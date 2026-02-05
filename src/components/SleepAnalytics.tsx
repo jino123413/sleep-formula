@@ -195,13 +195,13 @@ export function SleepAnalytics({
             </div>
             <div className="locked-overlay-content">
               <i className="ri-lock-line locked-icon"></i>
-              <p className="locked-text">맞춤 수면 분석이 준비되었어요</p>
+              <p className="locked-text">추가 수면 조언이 준비되었어요</p>
               <button className="unlock-btn" onClick={onUnlock}>
                 <i className="ri-lock-unlock-line"></i>
-                수면 분석 보기
+                추가 조언 보기
                 <span className="ad-badge">AD</span>
               </button>
-              <p className="ad-notice">광고 시청 후 맞춤 수면 분석을 확인할 수 있어요</p>
+              <p className="ad-notice">광고 시청 후 맞춤 조언과 상세 분석을 확인할 수 있어요</p>
             </div>
           </div>
         </div>
