@@ -89,24 +89,25 @@ body, .app-content { -ms-overflow-style: none; scrollbar-width: none; }
 .app-content {
   flex: 1;
   padding: 16px;
+  padding-bottom: 80px;
   overflow-y: auto;
 }
 
-/* --- 4. Tab Navigation --- */
+/* --- 4. Tab Navigation (Floating — Toss style) --- */
 .tab-bar {
   position: fixed;
-  bottom: 0;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 480px;
+  width: calc(100% - 32px);
+  max-width: 400px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background: var(--surface);
-  border-top: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.10), 0 0 0 1px rgba(0, 0, 0, 0.04);
   padding: 6px 0;
-  padding-bottom: calc(6px + var(--safe-area-bottom));
   z-index: 200;
 }
 
