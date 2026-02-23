@@ -12,6 +12,7 @@ import { SleepCalculator } from './components/SleepCalculator';
 import { CaffeineTracker } from './components/CaffeineTracker';
 import { SleepDebt } from './components/SleepDebt';
 import { SleepAnalytics } from './components/SleepAnalytics';
+import BannerAd from './components/BannerAd';
 
 type TabId = 'sleep' | 'caffeine' | 'debt' | 'analytics';
 
@@ -154,6 +155,9 @@ function App() {
             onUnlock={handleUnlockAnalytics}
           />
         )}
+
+        {/* Banner Ad - placed after content, never on core input areas */}
+        <BannerAd adGroupId="ait.v2.live.47876583240847" />
       </main>
 
       {/* Tab Bar */}
